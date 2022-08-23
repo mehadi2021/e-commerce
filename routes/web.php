@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/contract', 'HomeController@cont')->name('contract');
+Route::get('/daily-order', 'HomeController@view')->name('view');
 
 
 
@@ -82,7 +83,7 @@ Route::group(['middleware'=>'auth'], function () {
      Route::get('/couponlist','CartController@couponlist')->name('couponlist');
 
      Route::get('/coupondelete/{id}','CartController@coupondelete')->name('coupondelete');
-     
+
 
      Route::get('/live_search', 'LivesearchController@index');
 Route::get('/live_search/action', 'LivesearchController@action')->name('live_search.action');

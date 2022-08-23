@@ -1,5 +1,5 @@
 
-    
+
     <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-inner">
@@ -10,7 +10,7 @@
         </div>
     </div>
     <!-- End Preloader -->
-    
+
     <!-- Header -->
     <header class="header shop">
         <!-- Topbar -->
@@ -32,13 +32,13 @@
                         <div class="right-content">
                             <ul class="list-main">
                             <li>  <a href="https://www.google.com/maps/place/Ashulia+Bazar+Bus+Stop/@23.8976924,90.328817,17z/data=!3m1!4b1!4m5!3m4!1s0x3755c2511186ded3:0xb03e8d9f51ad0e47!8m2!3d23.8976875!4d90.3310057"> <i class="ti-location-pin"></i> Store location</li></a>
-                                <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
+                                <li><i class="ti-alarm-clock"></i> <a href="{{ route('view') }}">Daily deal</a></li>
 
-                                
+
 
                                 @guest
                                 <li><i class="ti-user"></i> <a href="{{ route('login') }}">My account</a></li>
-                               
+
                                 <li><i class="ti-power-off"></i><a href="{{ route('register') }}#">Registration</a></li>
                                  @else
                                  <li><span>{{ Auth::user()->name }}</span></li>
@@ -46,7 +46,7 @@
                                  <li><i class="ti-alarm-clock"></i> <a href="{{route('dashboard')}}">Admin Dashboard</a></li>
                                  <li>
                                     @endif
-                                 
+
 
                                      <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -58,7 +58,7 @@
                                         @csrf
                                     </form>
                                 </li>
- 
+
                                 @endif
                             </ul>
                         </div>
@@ -78,7 +78,7 @@
                         </div>
                         <!--/ End Logo -->
                         <!-- Search Form -->
-                      
+
                         <!--/ End Search Form -->
                         <div class="mobile-nav"></div>
                     </div>
@@ -86,7 +86,7 @@
                         <div class="search-bar-top">
                             <div class="search-bar">
 
-                               
+
                                 <form action="{{route('product.search')}}" method="GET">
                                     <input name="search" placeholder="Search Products Here....." type="text">
                                     <button type="submit" class="btnn"><i class="ti-search"></i></button>
@@ -101,7 +101,7 @@
                                 <a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                             </div>
                                                        <div class="sinlge-bar shopping">
-                                
+
                                 <a href="{{route('cartindex')}}" class="single-icon"><i class="ti-bag"></i>
                                     @guest
                                     <span class="total-count">0</span>
@@ -109,8 +109,8 @@
                                     <span class="total-count">{{\Cart::session(auth()->user()->id)->getTotalQuantity()}}</span>
                                     @endif
                                 </a>
-                                
-                               
+
+
                                 <!-- Shopping Item
                                 <div class="shopping-item">
                                     <div class="dropdown-cart-header">
@@ -145,7 +145,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
         <!-- Header Inner -->
         <header class="header shop">
             <div class="header-inner">
@@ -156,17 +156,17 @@
                                 <div class="menu-area">
                                     <!-- Main Menu -->
                                     <nav class="navbar navbar-expand-lg">
-                                        <div class="navbar-collapse">   
-                                            <div class="nav-inner"> 
+                                        <div class="navbar-collapse">
+                                            <div class="nav-inner">
                                                 <ul class="nav main-menu menu navbar-nav">
                                                     <li class="active"><a href="{{route('home')}}">Home</a></li>
-                                                    <li><a href="{{route('products')}}">Product</a></li>    
+                                                    <li><a href="{{route('products')}}">Product</a></li>
                                                     <li><a href="{{route('contract')}}">Contact Us</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </nav>
-                                    <!--/ End Main Menu --> 
+                                    <!--/ End Main Menu -->
                                 </div>
                             </div>
                         </div>
